@@ -1,20 +1,31 @@
 # CE676-Lab-LiDAR-Intensity
-### Exploring the Effect of Weather on LiDAR Intensity using ReaLiTy Framework
-## ReaLiTy Framework: Physics-Informed Learning-Based LiDAR Simulation
+Lab assignment for the course CE676 at IIT Kanpur. The lab focuses on analyzing the effect of adverse weather conditions on LiDAR intensity using the ReaLiTy framework.
+### ReaLiTy Framework: Physics-Informed Learning-Based LiDAR Simulation
 
 This repository provides the workspace and scripts to run the **ReaLiTy** framework. The core environment is hosted on Docker Hub to ensure a seamless, "no-install" setup.
 
 ---
 
-## 1. Fast Setup (Prerequisites)
+## 1. Setup (Prerequisites)
 
 1. **Install Docker:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or `sudo apt install docker.io` (Linux).
-2. **Clone this Repo:**
+2. **Setup the Repo:**
+    
+### Option A: Download as ZIP
+1. Go to the repository page:  
+   https://github.com/voodooed/CE676-Lab-LiDAR-Intensity  
+2. Click on **Code → Download ZIP**  
+3. Extract the downloaded file  
+4. Navigate into the extracted folder:
+
 ```bash
-   git clone https://github.com/yourusername/CE676-Lab-LiDAR-Intensity.git
+cd CE676-Lab-LiDAR-Intensity
+```
+### Option B: Clone this Repo
+```bash
+   git clone https://github.com/voodooed/CE676-Lab-LiDAR-Intensity.git
    cd ReaLiTy-Workspace
 ```
-
 ---
 
 ## 2. Running the Sample
