@@ -8,7 +8,7 @@ This repository provides the workspace and scripts to run the **ReaLiTy** framew
 
 ## 1. Setup (Prerequisites)
 
-1. **Install Docker:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or run the `install_docker_ubuntu.sh` script (Linux).
+1. **Install Docker:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or run the `./install_docker_ubuntu.sh` script (Linux).
 2. **Setup the Repo:**
     
 ### Option A: Download as ZIP
