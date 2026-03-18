@@ -1,37 +1,27 @@
-# Configuration
+#!/bin/bash
 
-$IMAGE_NAME = "voodooed/reality-lab:v1"
+# 1. Configuration - Replace with your actual Docker Hub username
+IMAGE_NAME="voodooed/reality-lab:v1"
 
+# 2. Create output folder if it doesn't exist (Linux style)
+mkdir -p ./output
 
+echo "Launching ReaLiTy Framework (Linux/Ubuntu)..."
 
-# Create output folder if it doesn't exist
+# 3. Run Docker
+# --user $(id -u):$(id -g) prevents the "Locked Folder" issue
+sudo docker run -it --rm \
+  --user $(id -u):$(id -g) \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/config.yaml:/app/config/config.yaml" \
+  $IMAGE_NAME \
+  python reality.py \
+    --mode transform \
+    --config config/config.yaml \
+    --picgan_root model/PICGAN \
+    --weights weights/weather/kitti_clear2snow.pth.tar_T1 \
+    --input /app/input \
+    --output /app/output
 
-if (-not (Test-Path -Path "./output")) {
-
-    New-Item -ItemType Directory -Path "./output"
-
-}
-
-
-
-Write-Host "🚀 Launching ReaLiTy Framework (Windows)..." -ForegroundColor Cyan
-
-
-
-# Run Docker
-
-docker run -it --rm `
-
-  -v "${PWD}/input:/app/input" `
-
-  -v "${PWD}/output:/app/output" `
-
-  -v "${PWD}/config.yaml:/app/config/config.yaml" `
-
-  $IMAGE_NAME `
-
-  python reality.py --mode transform --input /app/input --output /app/output --config config/config.yaml --picgan_root model/PICGAN --weights weights/weather/kitti_clear2snow.pth.tar_T1
-
-
-
-Write-Host "Done! Check the 'output' folder for results." -ForegroundColor Green
+echo "Done! Check the 'output' folder for results."
