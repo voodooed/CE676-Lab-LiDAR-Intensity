@@ -1,6 +1,6 @@
 # CE676-Lab-LiDAR-Intensity
-Lab assignment for the course CE676 at IIT Kanpur. The lab focuses on analyzing the effect of adverse weather conditions on LiDAR intensity using the ReaLiTy framework.
-### ReaLiTy Framework: Physics-Informed Learning-Based LiDAR Simulation
+Lab assignment for the course CE676 at IIT Kanpur. The lab focuses on analyzing the effect of adverse weather conditions on LiDAR data using the ReaLiTy framework.
+#### ReaLiTy Framework: Realistic LiDAR Transformation - A Physics-Informed Learning-Based LiDAR Simulation Framework
 
 This repository provides the workspace and scripts to run the **ReaLiTy** framework. The core environment is hosted on Docker Hub to ensure a seamless, "no-install" setup.
 
@@ -8,7 +8,7 @@ This repository provides the workspace and scripts to run the **ReaLiTy** framew
 
 ## 1. Setup (Prerequisites)
 
-1. **Install Docker:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or `sudo apt install docker.io` (Linux).
+1. **Install Docker:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or run the `install_docker_ubuntu.sh` script (Linux).
 2. **Setup the Repo:**
     
 ### Option A: Download as ZIP
@@ -19,7 +19,7 @@ This repository provides the workspace and scripts to run the **ReaLiTy** framew
 4. Navigate into the extracted folder:
 
 ```bash
-cd CE676-Lab-LiDAR-Intensity
+cd ReaLiTy-Workspace
 ```
 ### Option B: Clone this Repo
 ```bash
@@ -32,7 +32,7 @@ cd CE676-Lab-LiDAR-Intensity
 
 We have included sample data in the `input/` folder. To run the transformation immediately:
 
-**🐧 Linux / 🍎 macOS**
+** Linux /  macOS**
 ```bash
 chmod +x run_reality.sh
 ./run_reality.sh
